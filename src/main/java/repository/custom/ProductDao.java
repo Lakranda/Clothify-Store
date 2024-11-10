@@ -8,4 +8,7 @@ public interface ProductDao extends CrudDao<Product> {
     ObservableList<String> getAllProductIds();
     Product getSelectedProduct(String productId);
     void changeProductQty(Long productId,Integer qty);
+
+    boolean delete(String id);
+
 }

@@ -40,7 +40,7 @@
             <Label layoutX="30.0" layoutY="179.0" prefHeight="22.0" prefWidth="175.0" text="Label" textFill="WHITE" />
             <Label layoutX="30.0" layoutY="208.0" prefHeight="22.0" prefWidth="175.0" text="Label" textFill="WHITE" />
             <Label layoutX="30.0" layoutY="239.0" prefHeight="22.0" prefWidth="175.0" text="Label" textFill="WHITE" />
-            <Button layoutX="80.0" layoutY="275.0" mnemonicParsing="false" text="Settings" />
+            <Button layoutX="80.0" layoutY="275.0" mnemonicParsing="false" onAction="#btnUserSettingOnAction" text="Settings" />
          </children></Pane>
    </children>
 </AnchorPane>

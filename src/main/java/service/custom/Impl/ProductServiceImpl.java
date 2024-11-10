@@ -52,5 +52,12 @@ public class ProductServiceImpl implements ProductService {
         productDao.changeProductQty(productId,qty);
     }
 
+    @Override
+    public boolean deleteProduct(String id) {
+
+        return productDao.delete(id);
+
+    }
+
 
 }

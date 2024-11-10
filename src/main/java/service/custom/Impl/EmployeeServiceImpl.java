@@ -37,4 +37,16 @@ public class EmployeeServiceImpl implements EmployeeService {
     public ObservableList<String> getAllEmployeeIds() {
         return employeeDao.getAllEmployeeIds();
     }
+
+    @Override
+    public Employee getSelectedEmployee(String id) {
+        return employeeDao.getSelectedEmployee(id);
+    }
+
+    @Override
+    public boolean deleteUser(String id) {
+
+        return employeeDao.delete(id);
+
+    }
 }

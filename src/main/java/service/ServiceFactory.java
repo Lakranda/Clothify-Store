@@ -22,6 +22,7 @@ public class ServiceFactory {
             case ORDER: return (T) new OrderServiceImpl();
             case SUPPLIER: return (T) new SupplierServiceImpl();
             case PRODUCT: return (T) new ProductServiceImpl();
+            case RETURN: return (T) new ReturnServiceImpl();
 
         }
 

@@ -8,4 +8,8 @@ import java.util.List;
 
 public interface EmployeeDao extends CrudDao<Employee> {
     ObservableList<String> getAllEmployeeIds();
+
+    Employee getSelectedEmployee(String id);
+
+    boolean delete(String id);
 }

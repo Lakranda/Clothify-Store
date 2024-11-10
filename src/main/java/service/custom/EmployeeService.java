@@ -12,4 +12,7 @@ public interface EmployeeService extends SuperService {
     ObservableList<Employee> getAllEmployees();
     ObservableList<String> getAllEmployeeIds();
 
+    Employee getSelectedEmployee(String id);
+
+    boolean deleteUser(String id);
 }

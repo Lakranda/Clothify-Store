@@ -6,14 +6,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import service.ServiceFactory;
 import service.custom.ProductService;
 import service.custom.SupplierService;
 import util.ServiceType;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -108,6 +112,7 @@ public class SupplierFormController implements Initializable {
 
         if (isAdd){
             new Alert(Alert.AlertType.INFORMATION,"New Supplier Add Successfully..!").show();
+            tblSupplierProducts.setItems(FXCollections.observableArrayList());
             loadTable();
         }else {
             new Alert(Alert.AlertType.ERROR,"error. Supplier Not Add").show();
@@ -135,4 +140,15 @@ public class SupplierFormController implements Initializable {
 
     }
 
+    public void btnSupplierSettingOnAction(ActionEvent actionEvent) {
+
+        Stage supplierSettingStage=new Stage();
+        try {
+            supplierSettingStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/supplier_setting_form.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        supplierSettingStage.show();
+
+    }
 }

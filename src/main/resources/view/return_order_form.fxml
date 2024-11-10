@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
 
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnOrderFormController">
+   <children>
+      <Label alignment="CENTER" prefHeight="62.0" prefWidth="900.0" style="-fx-background-color: silver;" text="R e t u r n   O r d e r">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Pane layoutX="14.0" layoutY="82.0" prefHeight="406.0" prefWidth="246.0" style="-fx-background-color: silver;">
+         <children>
+            <ImageView fx:id="image" fitHeight="150.0" fitWidth="200.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <ComboBox fx:id="cmbProductId" layoutX="23.0" layoutY="178.0" prefHeight="24.0" prefWidth="200.0" promptText="Product ID" style="-fx-background-color: white;" />
+            <Label fx:id="lblProductName" layoutX="23.0" layoutY="221.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: white;" text="Product Name" />
+            <Label fx:id="lblPrice" layoutX="23.0" layoutY="263.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: white;" text="Price" />
+            <Button layoutX="60.0" layoutY="353.0" mnemonicParsing="false" onAction="#btnAddToReturnsOnAction" prefHeight="41.0" prefWidth="117.0" style="-fx-background-radius: 10px;" text="ADD TO RETURNS" textFill="#4716cf" />
+            <TextField fx:id="txtQty" layoutX="23.0" layoutY="305.0" prefHeight="25.0" prefWidth="200.0" promptText="Quantity" />
+         </children>
+      </Pane>
+      <Pane layoutX="266.0" layoutY="82.0" prefHeight="406.0" prefWidth="619.0" style="-fx-background-color: silver;">
+         <children>
+            <TableView fx:id="tblCart" layoutX="20.0" layoutY="66.0" prefHeight="241.0" prefWidth="579.0">
+               <columns>
+                  <TableColumn fx:id="colProductId" prefWidth="87.99993896484375" text="Product ID" />
+                  <TableColumn fx:id="colProductName" prefWidth="121.60003662109375" text="Product Name" />
+                  <TableColumn fx:id="colPrice" prefWidth="136.80001831054688" text="Price" />
+                  <TableColumn fx:id="colQuantity" prefWidth="82.4000244140625" text="Quantity" />
+                  <TableColumn fx:id="colTotal" prefWidth="155.199951171875" text="Total" />
+               </columns>
+            </TableView>
+            <Label layoutY="-2.0" prefHeight="41.0" prefWidth="157.0" style="-fx-background-color: white;" text=" Return Items">
+               <font>
+                  <Font name="System Italic" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="322.0" prefHeight="41.0" prefWidth="139.0" text="NET Total  :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNetTotal" layoutX="157.0" layoutY="325.0" prefHeight="32.0" prefWidth="133.0" text="0.0" textFill="#f21414">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="442.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnReturnOrderOnAction" prefHeight="62.0" prefWidth="157.0" style="-fx-background-radius: 15px;" text="Return Order" textFill="#ec4141">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>

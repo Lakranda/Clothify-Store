@@ -15,4 +15,5 @@ public interface ProductService extends SuperService {
     Product getSelectedProduct(String productId);
     void changeProductQty(Long productId,Integer qty);
 
+    boolean deleteProduct(String id);
 }

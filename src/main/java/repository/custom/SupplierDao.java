@@ -7,5 +7,7 @@ import repository.CrudDao;
 public interface SupplierDao extends CrudDao<Supplier> {
     ObservableList<String> getAllSupplierIds();
     Supplier getSelectedSupplier(String supplierId);
+    boolean delete(String id);
+
 
 }

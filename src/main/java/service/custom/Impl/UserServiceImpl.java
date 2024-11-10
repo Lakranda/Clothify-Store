@@ -13,11 +13,12 @@ import util.DaoType;
 
 public class UserServiceImpl implements UserService {
 
+    UserDao userDao=DaoFactory.getInstance().getDaoType(DaoType.USER);
+
 
     @Override
     public UserTypeDTO getUserType(String email, String password) {
 
-        UserDao userDao=DaoFactory.getInstance().getDaoType(DaoType.USER);
         return userDao.getUserType(email,password);
 
     }
@@ -26,7 +27,6 @@ public class UserServiceImpl implements UserService {
     public boolean setNewUser(UserDTO userDTO) {
 
         User user=new ModelMapper().map(userDTO,User.class);
-        UserDao userDao=DaoFactory.getInstance().getDaoType(DaoType.USER);
         return userDao.save(user);
 
     }
@@ -34,8 +34,35 @@ public class UserServiceImpl implements UserService {
     @Override
     public ObservableList<User> getAllUsers() {
 
-        UserDao userDao=DaoFactory.getInstance().getDaoType(DaoType.USER);
         return userDao.getAll();
+
+    }
+
+    @Override
+    public boolean changePassword(String email,String current, String nEw) {
+
+        return userDao.changePassword(email,current,nEw);
+
+    }
+
+    @Override
+    public ObservableList<String> getUserEmails() {
+
+        return userDao.getUserEmails();
+
+    }
+
+    @Override
+    public User getSelectedUser(String email) {
+
+        return userDao.getSelectedUser(email);
+
+    }
+
+    @Override
+    public boolean deleteUser(String email) {
+
+        return userDao.delete(email);
 
     }
 }

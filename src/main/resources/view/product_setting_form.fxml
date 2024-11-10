@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="273.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductSettingFormController">
+   <children>
+      <Label alignment="CENTER" layoutY="-2.0" prefHeight="62.0" prefWidth="600.0" style="-fx-background-color: silver;" text="P R O D U C T   S E T T I N G">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Pane layoutX="6.0" layoutY="66.0" prefHeight="202.0" prefWidth="587.0" style="-fx-background-color: silver;">
+         <children>
+            <Button layoutX="280.0" layoutY="157.0" mnemonicParsing="false" onAction="#btnUpdateProductOnAction" prefHeight="30.0" prefWidth="60.0" text="Save" />
+            <Button layoutX="364.0" layoutY="157.0" mnemonicParsing="false" onAction="#btnDeleteProductOnAction" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+            <Button layoutX="441.0" layoutY="157.0" mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="30.0" prefWidth="60.0" text="Cancel" />
+            <TextField fx:id="txtPrice" layoutX="388.0" layoutY="19.0" prefHeight="25.0" prefWidth="175.0" promptText="Price" />
+            <ComboBox fx:id="cmbProducts" layoutX="187.0" layoutY="20.0" prefHeight="25.0" prefWidth="175.0" promptText="Product" />
+         </children>
+      </Pane>
+      <ImageView fx:id="productImage" fitHeight="123.0" fitWidth="149.0" layoutX="27.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="txtName" layoutX="193.0" layoutY="128.0" prefHeight="25.0" prefWidth="175.0" promptText="Name" />
+      <TextField fx:id="txtSize" layoutX="193.0" layoutY="172.0" prefHeight="25.0" prefWidth="175.0" promptText="Size" />
+      <ComboBox fx:id="cmbType" layoutX="394.0" layoutY="172.0" prefHeight="25.0" prefWidth="175.0" promptText="Type" />
+      <TextField fx:id="txtQty" layoutX="394.0" layoutY="128.0" prefHeight="25.0" prefWidth="175.0" promptText="Quantity" />
+   </children>
+</AnchorPane>

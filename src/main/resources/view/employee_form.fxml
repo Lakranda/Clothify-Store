@@ -26,14 +26,6 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button layoutX="20.0" layoutY="242.0" mnemonicParsing="false" onAction="#btnDeleteEmployeeOnAction" prefHeight="28.0" prefWidth="171.0" style="-fx-background-color: #bcb8b8;" text="DELETE" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></Button>
-            <Button layoutX="20.0" layoutY="290.0" mnemonicParsing="false" onAction="#btnUpdateEmployeeOnAction" prefHeight="28.0" prefWidth="171.0" style="-fx-background-color: #bcb8b8;" text="UPDATE" textFill="WHITE">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></Button>
          </children>
       </Pane>
       <Pane layoutX="247.0" layoutY="89.0" prefHeight="346.0" prefWidth="538.0" style="-fx-background-color: silver;">
@@ -52,5 +44,10 @@
                </font></Label>
          </children>
       </Pane>
+      <Button layoutX="143.0" layoutY="396.0" mnemonicParsing="false" onAction="#btnEmployeeSettingOnaction" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #a582d4;" text="Setting">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

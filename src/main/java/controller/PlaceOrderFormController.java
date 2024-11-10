@@ -13,10 +13,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import service.ServiceFactory;
 import service.custom.OrderService;
@@ -24,6 +27,7 @@ import service.custom.ProductService;
 import util.ServiceType;
 
 
+import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -222,6 +226,31 @@ public class PlaceOrderFormController implements Initializable {
 
         this.empId=empId;
         System.out.println("Employee id : "+empId);
+
+    }
+
+    public void btnReturnOrderOnAction(ActionEvent actionEvent) {
+
+        Stage returnOrderStage=new Stage();
+        try {
+            returnOrderStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/return_order_form.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        returnOrderStage.show();
+
+
+    }
+
+    public void btnViewHistoryOrders(ActionEvent actionEvent) {
+
+        try {
+            Stage orderHistoryStage=new Stage();
+            orderHistoryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/history_order_form.fxml"))));
+            orderHistoryStage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }

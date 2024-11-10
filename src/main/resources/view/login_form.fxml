@@ -10,36 +10,36 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="290.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
    <children>
-      <Label alignment="CENTER" prefHeight="54.0" prefWidth="500.0" style="-fx-background-color: silver;" text="Clothify Store">
+      <Label alignment="CENTER" prefHeight="54.0" prefWidth="429.0" style="-fx-background-color: silver;" text="Clothify Store" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font name="System Bold Italic" size="33.0" />
          </font>
       </Label>
-      <Pane layoutX="23.0" layoutY="63.0" prefHeight="210.0" prefWidth="453.0" style="-fx-background-color: silver;">
+      <Pane layoutX="23.0" layoutY="63.0" prefHeight="190.0" prefWidth="419.0" style="-fx-background-color: silver;" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="63.0">
          <children>
-            <TextField fx:id="eMail" layoutX="116.0" layoutY="61.0" prefHeight="26.0" prefWidth="238.0" promptText="e-mail" style="-fx-background-color: white;">
+            <TextField fx:id="eMail" layoutX="84.0" layoutY="61.0" prefHeight="26.0" prefWidth="238.0" promptText="e-mail" style="-fx-background-color: white;">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <PasswordField fx:id="password" layoutX="116.0" layoutY="105.0" prefHeight="26.0" prefWidth="238.0" promptText="password" style="-fx-background-color: white;">
+            <PasswordField fx:id="password" layoutX="84.0" layoutY="105.0" prefHeight="26.0" prefWidth="238.0" promptText="password" style="-fx-background-color: white;">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </PasswordField>
-            <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="125.0" style="-fx-background-color: white;" text="LOGIN" textFill="#262424">
+            <Label alignment="TOP_LEFT" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: white;" text=" LOGIN" textFill="#262424">
                <font>
-                  <Font name="Roboto Bold" size="24.0" />
+                  <Font name="Roboto Bold" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="196.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="32.0" prefWidth="61.0" style="-fx-background-color: #d7c8c8; -fx-background-radius: 10px;" text="Login" textFill="WHITE">
+            <Button layoutX="164.0" layoutY="144.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="32.0" prefWidth="63.0" style="-fx-background-color: #d7c8c8; -fx-background-radius: 10px;" text="Login" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Hyperlink fx:id="forgotPw" alignment="CENTER_RIGHT" layoutX="250.0" layoutY="131.0" onAction="#forgotPassword" prefHeight="20.0" prefWidth="96.0" text="" textFill="#ef0c0c">
+            <Hyperlink fx:id="forgotPw" alignment="CENTER_RIGHT" layoutX="226.0" layoutY="131.0" onAction="#forgotPassword" prefHeight="20.0" prefWidth="96.0" text="" textFill="#ef0c0c">
                <font>
                   <Font size="10.0" />
                </font>

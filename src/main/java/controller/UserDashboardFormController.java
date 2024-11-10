@@ -50,4 +50,16 @@ public class UserDashboardFormController {
         empId=employeeId;
 
     }
+
+    public void btnUserSettingOnAction(ActionEvent actionEvent) {
+
+        try {
+            Stage settingStage=new Stage();
+            settingStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/user_password_form.fxml"))));
+            settingStage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 }

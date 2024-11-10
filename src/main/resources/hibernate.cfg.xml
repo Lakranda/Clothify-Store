@@ -35,6 +35,8 @@
         <mapping class="entity.OrderItem"/>
         <mapping class="entity.Product"/>
         <mapping class="entity.Supplier"/>
+        <mapping class="entity.Returns"/>
+        <mapping class="entity.ReturnItem"/>
 
     </session-factory>
 </hibernate-configuration>

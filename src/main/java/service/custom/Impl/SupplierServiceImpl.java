@@ -49,4 +49,9 @@ public class SupplierServiceImpl implements SupplierService {
     public ObservableList<String> getAllSupplierIds() {
         return supplierDao.getAllSupplierIds();
     }
+
+    @Override
+    public boolean deleteSupplier(String id) {
+        return supplierDao.delete(id);
+    }
 }

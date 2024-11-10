@@ -51,6 +51,7 @@
                   <TableColumn fx:id="colEmail" prefWidth="155.199951171875" text="E-MAIL" />
               </columns>
             </TableView>
+            <Button layoutX="436.0" layoutY="351.0" mnemonicParsing="false" onAction="#btnSupplierSettingOnAction" prefHeight="25.0" prefWidth="75.0" text="setting" />
          </children>
       </Pane>
    </children>
